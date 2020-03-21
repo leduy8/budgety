@@ -1,5 +1,29 @@
 //BUDGET CONTROLLER
-var budgetController = (function() {})();
+var budgetController = (function() {
+  var Expense = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;
+  };
+
+  var Income = function(id, description, value) {
+    this.id = id;
+    this.description = description;
+    this.value = value;
+  };
+
+  //Object to store all inc, exp items, all total inc, exp.
+  var data = {
+    allItems: {
+      exp: [],
+      inc: []
+    },
+    totals: {
+      totalExpenses: 0,
+      totalIncomes: 0
+    }
+  };
+})();
 
 //UI CONTROLLER
 var UIController = (function() {
